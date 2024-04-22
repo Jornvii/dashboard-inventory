@@ -1,0 +1,111 @@
+<div class="wrapper">
+  <div class="container">
+    <h1>Form Requestion Gauge</h1>
+    <br />
+    <form action="SEND ADDRESS" id="ft-form" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
+      <!-- <label >Doc No : ...............</label><br><br> -->
+
+      <fieldset>
+        <label>
+          DV
+          <select name="for" required>
+            <option>---</option>
+            <option>G/M 1</option>
+            <option>PMA</option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset>
+        <div class="two-cols">
+          <label>
+            Fac *
+            <input type="text" name="First name" placeholder="Fac No" required />
+          </label>
+        </div>
+      </fieldset>
+
+
+      <fieldset>
+        <legend>Gauge Detials</legend>
+        <div class="two-cols">
+          <label>
+            Part No *
+            <input type="text" name="First name" placeholder="Enter part number" required />
+          </label>
+          <label>
+            Rev *
+            <input name="Family name" placeholder="Drawing" required />
+          </label>
+        </div>
+        <div class="two-cols">
+          <label>
+            Process
+            <input type="text" name="ZIP" />
+          </label>
+          <label>
+            Use for
+            <div class="custom-select">
+              <select>
+                <option value="">---</option>
+                <option value="">Sorting</option>
+                <option value="">Sample</option>
+                <option value="">F/A</option>
+                <option value="">Rework</option>
+                <option value="">Mass Product</option>
+                <option value="">Pre Product</option>
+                <option value="">Other</option>
+              </select>
+            </div>
+          </label>
+        </div>
+        <div class="two-cols">
+          <label>
+            MC
+            <input type="text" name="mc" required />
+          </label>
+          <label>
+            MC.No
+            <input type="text" name="mcno" required />
+          </label>
+        </div>
+        <div class="two-cols">
+          <label>
+            Section
+            <input type="text" name="section" required />
+          </label>
+          <label>
+            Request by
+            <input type="text" name="requester" placeholder="Your Full Name" required/>
+          </label>
+        </div>
+
+
+
+
+        <div class="two-cols">
+
+          <label>
+            Date of Req.
+            <input type="date" name="Date of birth" required/>
+          </label>
+        </div>
+        <label>
+          Other
+          <textarea type="text" name="Address"></textarea>
+        </label>
+
+      </fieldset>
+
+      <div class="btns">
+        <input type="text" name="_gotcha" value="" style="display: none" />
+        <input type="submit" value="Submit" />
+
+
+        <input class="btns-clear" type="button" value="clear" />
+      </div>
+    </form>
+  </div>
+
+  <br /><br />
+  <app-footer></app-footer>
+</div>
