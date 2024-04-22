@@ -1,32 +1,38 @@
 <div class="wrapper">
   <div class="container">
-    <h1>Form Requestion Gauge</h1>
+    <h1>Form Request Gauge</h1>
     <br />
     <form action="SEND ADDRESS" id="ft-form" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
       <!-- <label >Doc No : ...............</label><br><br> -->
 
       <fieldset>
+
+
+      <div class="two-cols">
+        <label >Divisio
+        <div class="custom-select">
+          <mat-select>
+            @for (division of divisions; track division) {
+            <mat-option [value]="division.value">{{division.viewValue}}</mat-option>
+            }
+          </mat-select>
+        </div></label>
         <label>
-          DV
-          <select name="for" required>
-            <option>---</option>
-            <option>G/M 1</option>
-            <option>PMA</option>
-          </select>
+          Fac *
+          <input name="Family name" placeholder="Fac." required />
         </label>
+      </div>
       </fieldset>
-      <fieldset>
-        <div class="two-cols">
+      <!-- <fieldset>      <div class="two-cols">
           <label>
             Fac *
             <input type="text" name="First name" placeholder="Fac No" required />
           </label>
         </div>
-      </fieldset>
+      </fieldset> -->
 
 
       <fieldset>
-        <legend>Gauge Detials</legend>
         <div class="two-cols">
           <label>
             Part No *
@@ -43,9 +49,14 @@
             <input type="text" name="ZIP" />
           </label>
           <label>
-            Use for
+            Production
             <div class="custom-select">
-              <select>
+
+              <mat-select>
+                @for (Production of Productions; track Production) {
+                <mat-option [value]="Production.product">{{Production.viewValue}}</mat-option>
+                }</mat-select>
+              <!-- <select>
                 <option value="">---</option>
                 <option value="">Sorting</option>
                 <option value="">Sample</option>
@@ -54,7 +65,17 @@
                 <option value="">Mass Product</option>
                 <option value="">Pre Product</option>
                 <option value="">Other</option>
-              </select>
+              </select> -->
+              <!-- <select>
+                <option value="">---</option>
+                <option value="">Sorting</option>
+                <option value="">Sample</option>
+                <option value="">F/A</option>
+                <option value="">Rework</option>
+                <option value="">Mass Product</option>
+                <option value="">Pre Product</option>
+                <option value="">Other</option>
+              </select> -->
             </div>
           </label>
         </div>
@@ -75,7 +96,7 @@
           </label>
           <label>
             Request by
-            <input type="text" name="requester" placeholder="Your Full Name" required/>
+            <input type="text" name="requester" placeholder="Your Full Name" required />
           </label>
         </div>
 
@@ -86,7 +107,7 @@
 
           <label>
             Date of Req.
-            <input type="date" name="Date of birth" required/>
+            <input type="date" name="Date of birth" required />
           </label>
         </div>
         <label>

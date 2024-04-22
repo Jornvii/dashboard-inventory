@@ -45,13 +45,13 @@ export class RegisterComponent {
   //event for registration
   proceedregistration() {
     if (this.registerform.valid) {
-      this.service.Proceedregister(this.registerform.value).subscribe((res => {
+      this.service.Proceedregister(this.registerform.value).subscribe(res => {
         this.toastr.success(
           'Please Contact Admin to approve you to access the system',
           'Registered successfully'
         );
         this.router.navigate(['/login']);
-      }));
+      });
     } else {
       this.toastr.warning('please enter a valid registration');
     }

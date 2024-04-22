@@ -12,11 +12,7 @@
 
 
     <mat-card-content>
-      <form
-        class="example-form"
-        [formGroup]="registerform"
-        (ngSubmit)="proceedregistration()"
-      >
+      <form class="example-form" [formGroup]="registerform" (ngSubmit)="proceedregistration()">
         <mat-form-field class="example-full-width">
           <mat-label>Emp.ID</mat-label>
           <input matInput formControlName="id" />
@@ -41,9 +37,7 @@
         </mat-form-field>
         <div class="btn-log">
           <button mat-raised-button color="primary" style="margin: 10px;">Register</button>
-          <a routerLink="/login"
-            ><button mat-raised-button color="accent">Back to login</button></a
-          >
+          <a routerLink="/login"><button mat-raised-button color="accent">Back to login</button></a>
         </div>
       </form>
     </mat-card-content>
