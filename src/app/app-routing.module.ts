@@ -8,6 +8,7 @@ import { ConfirmComponent } from './confirm/confirm.component';
 import { ListRequestComponent } from './list-request/list-request.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RegisterComponent } from './register/register.component';
+import { HomepageComponent } from './homepage/homepage.component';
 
 
 
@@ -21,7 +22,10 @@ const routes: Routes = [
   { path: 'admin', component: AdminComponent },
   { path: 'register', component: RegisterComponent },
   {path:'login', component: LoginComponent},
+  {path:'homepage', component: HomepageComponent},
+
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' } // Default route
+  // { path: '', redirectTo: '/dashboard', pathMatch: 'full' } // Default route
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

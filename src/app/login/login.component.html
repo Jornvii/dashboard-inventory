@@ -4,8 +4,6 @@
       src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Minebea_Logo.svg/2560px-Minebea_Logo.svg.png"
       alt="mnb logo"
     />
-
-
     <h1>Log in</h1>
   </div>
 
@@ -28,10 +26,11 @@
           <input type="password" matInput formControlName="password" />
         </mat-form-field>
         <div class="btn-log">
-          <button mat-raised-button color="primary" style="margin: 10px">
+          <a routerLink="homepage"><button mat-raised-button color="primary" style="margin: 10px">
             Login
-          </button>
-          <p>Don't have an account yet?<a routerLink="register">Register here</a></p>
+          </button></a>
+          <p>Don't have an account yet? <a routerLink="/register">Register here</a></p>
+
         </div>
       </form>
     </mat-card-content>

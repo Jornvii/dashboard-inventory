@@ -41,7 +41,8 @@ import { MaterialModule } from './material.module';
     AdminComponent,
     DashboardComponent,
     HomepageComponent,
-    LoginComponent,RegisterComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
