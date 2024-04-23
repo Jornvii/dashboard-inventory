@@ -25,6 +25,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { MaterialModule } from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatTableModule } from '@angular/material/table';
+import { MatInputModule } from '@angular/material/input';
+
 
 @NgModule({
   declarations: [
@@ -36,7 +40,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LastFewTransactionsComponent,
     FooterComponent,
     RequestComponent,
-    ListRequestComponent,
     ConfirmComponent,
     CalculateComponent,
     AdminComponent,
@@ -55,6 +58,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ReactiveFormsModule,
     HttpClientModule,
     ToastrModule.forRoot(),
+    BrowserModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    MatPaginatorModule,
+    MatTableModule,  BrowserModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    MatInputModule,
+    MatPaginatorModule,
+    MatTableModule,MatPaginatorModule, MatPaginatorModule
   ],
   providers: [
     provideClientHydration(),

@@ -22,7 +22,7 @@ import { MatTableModule } from '@angular/material/table';
     MatPaginatorModule,
     MatSortModule,
     MatDialogModule,
-    MatButtonModule,
+    MatButtonModule,MatPaginatorModule,
   ],
 })
 export class MaterialModule {}
