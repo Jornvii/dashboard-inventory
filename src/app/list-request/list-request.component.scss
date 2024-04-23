@@ -3,12 +3,13 @@ table {
 }
 
 .mat-elevation-z8 {
+  text-align: center;
   width: 100%;
   border-collapse: collapse;
   border: 1px solid #ddd;
 }
 
-.mat-elevation-z8 th, .mat-elevation-z8 td {
+.mat-elevation-z8 th, .mat-elevation-z8 td {text-align: center;
   padding: 8px;
   border-bottom: 1px solid #ddd;
 }
@@ -16,7 +17,7 @@ table {
 .mat-elevation-z8 th {
   border: 1px solid #ddd;
   background-color: #9bb8f5;
-  text-align: left;
+  text-align: center;
 }
 
 .mat-elevation-z8 tr:nth-child(even) {
