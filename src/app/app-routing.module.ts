@@ -29,6 +29,7 @@ const routes: Routes = [
   {path:'return', component: ReturnComponent},
   {path:'history', component: HistoryComponent},
 
+
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' } // Default route
   // { path: '', redirectTo: '/dashboard', pathMatch: 'full' } // Default route
 ];

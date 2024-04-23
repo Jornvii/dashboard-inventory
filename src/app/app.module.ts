@@ -29,7 +29,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
 import { ReturnComponent } from './return/return.component';
-import { HistoryComponent } from './history/history.component';
+import { HistoryComponent } from './history/history.component'
 
 
 @NgModule({
@@ -51,6 +51,7 @@ import { HistoryComponent } from './history/history.component';
     LoginComponent,
     RegisterComponent,
     ReturnComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -66,12 +67,12 @@ import { HistoryComponent } from './history/history.component';
     BrowserAnimationsModule,
     HttpClientModule,
     MatPaginatorModule,
-    MatTableModule,  BrowserModule,
+    MatTableModule, BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
     MatInputModule,
     MatPaginatorModule,
-    MatTableModule,MatPaginatorModule, MatPaginatorModule
+    MatTableModule, MatPaginatorModule, MatPaginatorModule
   ],
   providers: [
     provideClientHydration(),

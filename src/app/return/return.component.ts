@@ -14,11 +14,6 @@ interface Production{
   styleUrl: './return.component.scss'
 })
 export class ReturnComponent {
-  activeTab: string = 'tab1';
-
-  setActiveTab(tab: string) {
-    this.activeTab = tab;
-  }
 
 
   divisions: Division[] = [

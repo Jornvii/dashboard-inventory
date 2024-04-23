@@ -1,12 +1,6 @@
-<div class="tab">
-  <button class="tablinks" [class.active]="activeTab === 'tab1'" (click)="setActiveTab('tab1')">Return</button>
-  <button class="tablinks" [class.active]="activeTab === 'tab2'" (click)="setActiveTab('tab2')">Move</button>
-  <button class="tablinks" [class.active]="activeTab === 'tab3'" (click)="setActiveTab('tab3')">Cancel</button>
-</div>
-
-<div *ngIf="activeTab === 'tab1'"><div class="wrapper">
+<div class="wrapper">
   <div class="container">
-    <h1>Return Gauge</h1>
+    <h1>Form Request Gauge</h1>
     <br />
     <form action="SEND ADDRESS" id="ft-form" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
       <!-- <label >Doc No : ...............</label><br><br> -->
@@ -15,7 +9,7 @@
 
 
       <div class="two-cols">
-        <label >Divisio
+        <label >Issue Gauge
         <div class="custom-select">
           <mat-select>
             @for (division of divisions; track division) {
@@ -136,9 +130,3 @@
   <br /><br />
   <app-footer></app-footer>
 </div>
-</div>
-
-
-
-<div *ngIf="activeTab === 'tab2'">Content for Tab 2</div>
-<div *ngIf="activeTab === 'tab3'">Content for Tab 3</div>

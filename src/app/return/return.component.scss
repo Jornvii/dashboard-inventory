@@ -184,11 +184,11 @@ select[name="Application for"] {
 }
 
 //css tryy
-/* Style for the two-cols container */
+
 .two-cols {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 10px; /* Adjust the gap as per your requirement */
+  grid-gap: 10px;
   align-items: center;
 }
 
@@ -199,36 +199,18 @@ select[name="Application for"] {
 
 /* Style for the mat-form-field */
 .mat-form-field {
-  width: 100%; /* Adjust the width as per your requirement */
+  width: 100%;
 }
 
 /* Style for the input field */
 input[name="Family name"] {
-  width: calc(100% - 10px); /* Adjust the width as per your requirement */
+  width: calc(100% - 10px);
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
 }
 
-
-// @media screen and (max-width: 1024px) {
-//   .container{
-//     height: 80vh;
-
-// }
-
-// @media screen and (max-width: 576px) {
-//   .main-container .box1 p,
-//   .main-container .box2 p,
-//   .main-container .box3 p {
-//     font-size: 0.5em; // Further adjust font size for even smaller screens
-//   }
-// }
-// .custom-select {
-//   min-width: 280px;
-//   position: relative;
-// }
 
 select {
   appearance: none;
