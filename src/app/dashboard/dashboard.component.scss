@@ -2,7 +2,7 @@
   box-shadow:
     rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  height: 60vh;
+  height: fit-content;
   background-color: rgba(195, 209, 240, 0.356);
   border-radius: 15px;
 }
@@ -70,9 +70,6 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .container {
-    height: 30vh;
-  }
   .main-container .box1 p,
   .main-container .box2 p,
   .main-container .box3 p,

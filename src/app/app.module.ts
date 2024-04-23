@@ -28,10 +28,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
+import { ReturnComponent } from './return/return.component';
+import { HistoryComponent } from './history/history.component';
 
 
 @NgModule({
   declarations: [
+    HistoryComponent,
     AppComponent,
     HeaderComponent,
     SideNavComponent,
@@ -47,6 +50,7 @@ import { MatInputModule } from '@angular/material/input';
     HomepageComponent,
     LoginComponent,
     RegisterComponent,
+    ReturnComponent,
   ],
   imports: [
     BrowserModule,
