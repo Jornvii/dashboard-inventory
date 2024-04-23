@@ -61,7 +61,7 @@ export class RequestComponent {
     { process: 'Rework', viewProcess: 'Rework' },
     { process: 'Mass Product', viewProcess: 'Mass Product' },
     { process: 'Pre Product', viewProcess: 'Pre Product' },
-    { process: 'Other', viewProcess: 'Other' },
+    { process: 'Other', viewProcess: '---' },
   ];
 
   selectedProcess: string = '---';
