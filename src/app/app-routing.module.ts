@@ -11,6 +11,7 @@ import { RegisterComponent } from './register/register.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ReturnComponent } from './return/return.component';
 import { HistoryComponent } from './history/history.component';
+import { IssueComponent } from './issue/issue.component';
 
 
 
@@ -28,6 +29,7 @@ const routes: Routes = [
   {path:'homepage', component: HomepageComponent},
   {path:'return', component: ReturnComponent},
   {path:'history', component: HistoryComponent},
+  {path:'issue', component: IssueComponent},
 
 
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' } // Default route

@@ -1,10 +1,11 @@
 .main-container {
-  display: flex;
+  display: flex;padding-top: 73px;
 
   .side-nav {transition: all 0.5s;
+    border-top-right-radius: 10px;
     width: 150px;
-    min-width: 230px;
-
+    min-width: 220px;
+    // this is widht of navbar at the left page
     min-height: calc(100vh - 70px);
     background-color: #106cb7;
     color: #fff;
@@ -15,18 +16,11 @@
       min-width: 60px;
       transition: all 0.5s;
     }
-    // @media only screen and (max-width: 1024px) {
-    //   .side-nav{
-    //     height: 30vh;
-    //   transition: all 0.5s;
-    //   }
-    // }
-
 
   }
 
   .main {
-    flex: 1; /* Adjusts the main content area to take up remaining space */
+    flex: 1;
     padding: 20px;
   }
 }

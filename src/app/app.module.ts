@@ -1,3 +1,4 @@
+import { IssueComponent } from './issue/issue.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 
@@ -30,6 +31,7 @@ import { ReturnComponent } from './return/return.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 
 
+
 @NgModule({
   declarations: [
     HistoryComponent,
@@ -47,7 +49,6 @@ import { SideNavComponent } from './side-nav/side-nav.component';
     HomepageComponent,
     LoginComponent,
     RegisterComponent,
-    ReturnComponent,
 
   ],
   imports: [

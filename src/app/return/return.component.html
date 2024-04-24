@@ -1,132 +1,65 @@
 <div class="wrapper">
   <div class="container">
-    <h1>Form Request Gauge</h1>
+    <!-- <h3>Date : 26/04/2024</h3> -->
     <br />
-    <form action="SEND ADDRESS" id="ft-form" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
-      <!-- <label >Doc No : ...............</label><br><br> -->
-
-      <fieldset>
-
-
+    <fieldset>
       <div class="two-cols">
-        <label >Issue Gauge
-        <div class="custom-select">
-          <mat-select>
-            @for (division of divisions; track division) {
-            <mat-option [value]="division.value">{{division.viewValue}}</mat-option>
-            }
-          </mat-select>
-        </div></label>
         <label>
-          Fac *
-          <input name="Family name" placeholder="Fac." required />
+          Doc No *
+          <input
+            type="text"
+            name="First name"
+            placeholder="Enter Doc number"
+            required
+          />
         </label>
+        <!-- <label>
+          Date *
+          <span>24/04/2024</span>
+        </label> -->
       </div>
-      </fieldset>
-      <!-- <fieldset>      <div class="two-cols">
-          <label>
-            Fac *
-            <input type="text" name="First name" placeholder="Fac No" required />
-          </label>
-        </div>
-      </fieldset> -->
+    </fieldset>
 
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      <ng-container matColumnDef="part">
+        <th mat-header-cell *matHeaderCellDef>Part No.</th>
+        <td mat-cell *matCellDef="let element">{{ element.part }}</td>
+      </ng-container>
 
-      <fieldset>
-        <div class="two-cols">
-          <label>
-            Part No *
-            <input type="text" name="First name" placeholder="Enter part number" required />
-          </label>
-          <label>
-            Rev *
-            <input name="Family name" placeholder="Drawing" required />
-          </label>
-        </div>
-        <div class="two-cols">
-          <label>
-            Process
-            <input type="text" name="ZIP" />
-          </label>
-          <label>
-            Production
-            <div class="custom-select">
+      <ng-container matColumnDef="gauge">
+        <th mat-header-cell *matHeaderCellDef>Gauge Name</th>
+        <td mat-cell *matCellDef="let element">{{ element.gauge }}</td>
+      </ng-container>
 
-              <mat-select>
-                @for (Production of Productions; track Production) {
-                <mat-option [value]="Production.product">{{Production.viewValue}}</mat-option>
-                }</mat-select>
-              <!-- <select>
-                <option value="">---</option>
-                <option value="">Sorting</option>
-                <option value="">Sample</option>
-                <option value="">F/A</option>
-                <option value="">Rework</option>
-                <option value="">Mass Product</option>
-                <option value="">Pre Product</option>
-                <option value="">Other</option>
-              </select> -->
-              <!-- <select>
-                <option value="">---</option>
-                <option value="">Sorting</option>
-                <option value="">Sample</option>
-                <option value="">F/A</option>
-                <option value="">Rework</option>
-                <option value="">Mass Product</option>
-                <option value="">Pre Product</option>
-                <option value="">Other</option>
-              </select> -->
-            </div>
-          </label>
-        </div>
-        <div class="two-cols">
-          <label>
-            MC
-            <input type="text" name="mc" required />
-          </label>
-          <label>
-            MC.No
-            <input type="text" name="mcno" required />
-          </label>
-        </div>
-        <div class="two-cols">
-          <label>
-            Section
-            <input type="text" name="section" required />
-          </label>
-          <label>
-            Request by
-            <input type="text" name="requester" placeholder="Your Full Name" required />
-          </label>
-        </div>
+      <ng-container matColumnDef="gmodel">
+        <th mat-header-cell *matHeaderCellDef>Gauge Model</th>
+        <td mat-cell *matCellDef="let element">{{ element.gmodel }}</td>
+      </ng-container>
 
+      <ng-container matColumnDef="qty">
+        <th mat-header-cell *matHeaderCellDef>Qty</th>
+        <td mat-cell *matCellDef="let element">{{ element.qty }}</td>
+      </ng-container>
 
+      <ng-container matColumnDef="process">
+        <th mat-header-cell *matHeaderCellDef>Process</th>
+        <td mat-cell *matCellDef="let element">{{ element.process }}</td>
+      </ng-container>
 
+      <ng-container matColumnDef="mc">
+        <th mat-header-cell *matHeaderCellDef>MC</th>
+        <td mat-cell *matCellDef="let element">{{ element.mc }}</td>
+      </ng-container>
+      <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef>Status</th>
+        <td mat-cell *matCellDef="let element">{{ element.status }}</td>
+      </ng-container>
 
-        <div class="two-cols">
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+    <button class="sub-button">Return Gauge ✔️</button>
 
-          <label>
-            Date of Req.
-            <input type="date" name="Date of birth" required />
-          </label>
-        </div>
-        <label>
-          Other
-          <textarea type="text" name="Address"></textarea>
-        </label>
-
-      </fieldset>
-
-      <div class="btns">
-        <input type="text" name="_gotcha" value="" style="display: none" />
-        <input type="submit" value="Submit" />
-
-
-        <input class="btns-clear" type="button" value="clear" />
-      </div>
-    </form>
+    <!-- <mat-paginator [pageSizeOptions]="[5, 25, 50]" showFirstLastButtons></mat-paginator> -->
   </div>
-
-  <br /><br />
-  <app-footer></app-footer>
 </div>
