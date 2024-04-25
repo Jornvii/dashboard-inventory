@@ -31,3 +31,22 @@ table {
   text-align: center;
   width: 50px;
 }
+
+
+
+$default-color: #000;
+$clicked-color: #ff0000;
+
+// Define styles for the mat-icon element
+mat-icon {
+  color: $default-color; // Set the default color
+  transition: color 0.3s; // Add transition for smooth color change
+
+  &:hover{
+    background-color:  rgb(125, 198, 16);
+    border-radius: 50%;
+  }
+  &:active {
+    color: $clicked-color; // Change the color when clicked
+  }
+}

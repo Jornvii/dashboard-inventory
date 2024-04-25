@@ -1,41 +1,68 @@
 
 <div class="container">
 
-<h3>Date : 26/04/2024</h3>
+<h3 style="text-align: center; font-weight: 900;font-size: 18px;">List Request</h3>
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-  <!-- Position Column -->
+
+
+
+  <!--1 NO Column -->
   <ng-container matColumnDef="position">
     <th mat-header-cell *matHeaderCellDef> No. </th>
     <td mat-cell *matCellDef="let element"> {{element.position}} </td>
   </ng-container>
 
-  <!-- Date Column -->
+  <!-- 2Date Request -->
+  <ng-container matColumnDef="datereq">
+    <th mat-header-cell *matHeaderCellDef> Date Req. </th>
+    <td mat-cell *matCellDef="let element"> {{element.datereq}} </td>
+  </ng-container>
+  <!-- 3Doc Column -->
   <ng-container matColumnDef="part">
     <th mat-header-cell *matHeaderCellDef> Doc NO. </th>
     <td mat-cell *matCellDef="let element"> {{element.part}} </td>
   </ng-container>
 
-  <!-- Weight Column -->
+  <!--4 Part Number Column -->
   <ng-container matColumnDef="mc">
     <th mat-header-cell *matHeaderCellDef> Part No </th>
     <td mat-cell *matCellDef="let element"> {{element.mc}} </td>
   </ng-container>
-
-  <!-- status Column -->
+<!--5 proces Column -->
   <ng-container matColumnDef="process">
     <th mat-header-cell *matHeaderCellDef> Process </th>
     <td mat-cell *matCellDef="let element"> {{element.process}} </td>
   </ng-container>
 
+<!--6 Area Column -->
+  <ng-container matColumnDef="area">
+    <th mat-header-cell *matHeaderCellDef> Area </th>
+    <td mat-cell *matCellDef="let element"> {{element.area}} </td>
+  </ng-container>
+<!--7 request by -->
+<ng-container matColumnDef="reqby">
+    <th mat-header-cell *matHeaderCellDef> Request by </th>
+    <td mat-cell *matCellDef="let element"> {{element.reqby}} </td>
+  </ng-container>
+<!--8 status  -->
   <ng-container matColumnDef="status">
     <th mat-header-cell *matHeaderCellDef> status </th>
     <td mat-cell *matCellDef="let element"> {{element.status}} </td>
   </ng-container>
-  <ng-container matColumnDef="submit">
-    <th mat-header-cell *matHeaderCellDef> request </th>
-    <td mat-cell *matCellDef="let element"> {{element.submit}} </td>
+
+  <!-- click to Issue Gauge  -->
+
+  <ng-container matColumnDef="setgauge">
+    <th mat-header-cell *matHeaderCellDef>Set Gauge</th>
+    <td mat-cell *matCellDef="let element"> {{element.setgauge}}
+      <!-- <button mat-icon-button color="primary" (click)="openDetailView(element)"> -->
+        <mat-icon>add_circle_outline</mat-icon>
+      <!-- </button> -->
+    </td>
   </ng-container>
+
+
 
 
 

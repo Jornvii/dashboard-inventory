@@ -1,18 +1,18 @@
-.container{
+.container {
   background-color: #f0f0f0;
   border-radius: 10px;
   box-shadow:
     rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-    padding: 5px;
+  padding: 5px;
 }
-h1{
+h1 {
   text-align: center;
 }
 
 #ft-form {
   font-family: Arial, sans-serif;
-  max-width:700px;
+  max-width: 700px;
   margin: 0 auto;
 
   fieldset {
@@ -59,47 +59,46 @@ h1{
     }
   }
 
-  .btns {
-    text-align: center;
+  .sub-button {
+    width: 150px;
+    margin: 15px;
+    background-color: #1f8bff;
+    border: none;
+    color: black ;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition effect on hover */
 
-    input[type="submit"] {
-      padding: 10px 20px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      font-size: 16px;
+    &:hover {
+      background-color: #459fff; /* Button background color on hover */
+      color: #000;
+      font-weight: 700;
 
-      &:hover {
-        background-color: #45a049;
-      }
     }
   }
   .btns-clear {
     margin-left: 20px;
     text-align: center;
-      padding: 10px 20px;
-      background-color: red;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      font-size: 16px;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
 
-      &:hover {
-        background-color: rgb(214, 8, 8);
-      }
+    &:hover {
+      background-color: rgb(214, 8, 8);
     }
   }
+}
 
-  // Hide the hidden field for bots
-  input[name="_gotcha"] {
-    display: none;
-  }
-
+// Hide the hidden field for bots
+input[name="_gotcha"] {
+  display: none;
+}
 
 //request
 select[name="Application for"] {
@@ -166,7 +165,6 @@ input[name="Family name"] {
   box-sizing: border-box;
 }
 
-
 // @media screen and (max-width: 1024px) {
 //   .container{
 //     height: 80vh;
@@ -222,8 +220,6 @@ select {
   border-top: var(--size) solid black;
   top: 55%;
 }
-
-
 
 .custom-select {
   // Styles for the mat-select

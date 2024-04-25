@@ -7,6 +7,7 @@ import { MatButtonModule } from '@angular/material/button';
 // import { PeriodicElement } from './models/periodic-element';
 // Adjust the path according to your file structure
 import { MatSelectModule } from '@angular/material/select';
+import { DetialComponent } from '../detial/detial.component';
 
 @Component({
   selector: 'app-history',
@@ -30,19 +31,15 @@ export class HistoryComponent implements AfterViewInit {
     }
   }
 
-  // Function to open the detailed view
-  openDetailView(element: PeriodicElement): void {
-    // Here you can implement the logic to open the detailed view.
-    // For example, you can navigate to another page or open a dialog with additional information.
-    // Below is an example of opening a dialog:
-    const dialogRef = this.dialog.open(DetailViewDialogComponent, {
-      width: '500px',
-      data: element // Pass the element data to the dialog if needed
+  openDetailView(element: any): void {
+    const dialogRef = this.dialog.open(DetialComponent, {
+      width: '80%',
+      height: '100%',
+      data: element // Pass the data to the dialog
     });
 
-    // You can optionally subscribe to the dialog's afterClosed event to handle any actions after the dialog is closed
     dialogRef.afterClosed().subscribe(result => {
-      // Handle any actions after the dialog is closed
+      console.log('The dialog was closed')
     });
   }
 }
@@ -51,7 +48,7 @@ export class HistoryComponent implements AfterViewInit {
 export class DetailViewDialogComponent {
   constructor() { } // No need to inject anything for this example, adjust as per your actual requirements
 }
-// File: periodic-element.ts
+
 
 export interface PeriodicElement {
   part: string;
