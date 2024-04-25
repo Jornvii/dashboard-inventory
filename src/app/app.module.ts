@@ -1,4 +1,4 @@
-import { IssueComponent } from './issue/issue.component';
+// import { IssueComponent } from './issue/issue.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 
@@ -34,7 +34,6 @@ import { SideNavComponent } from './side-nav/side-nav.component';
 
 @NgModule({
   declarations: [
-    HistoryComponent,
     AppComponent,
     HeaderComponent,
     SideNavComponent,

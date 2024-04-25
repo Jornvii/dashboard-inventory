@@ -11,7 +11,7 @@ import { RegisterComponent } from './register/register.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ReturnComponent } from './return/return.component';
 import { HistoryComponent } from './history/history.component';
-import { IssueComponent } from './issue/issue.component';
+import { DetialComponent } from './detial/detial.component';
 
 
 
@@ -29,7 +29,8 @@ const routes: Routes = [
   {path:'homepage', component: HomepageComponent},
   {path:'return', component: ReturnComponent},
   {path:'history', component: HistoryComponent},
-  {path:'issue', component: IssueComponent},
+  {path:'detial', component: DetialComponent},
+    { path: 'detail/:id', component: DetialComponent }, // Define a route with a parameter (e.g., id)
 
 
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' } // Default route
@@ -39,6 +40,9 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+
+
+ }
 
 
