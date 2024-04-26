@@ -26,6 +26,15 @@
       "gender": "male",
       "role": "",
       "isactive": false
+    },
+    {
+      "id": "kong1",
+      "name": "kongkong",
+      "password": "Kong@1234a",
+      "email": "Kong@male",
+      "gender": "male",
+      "role": "",
+      "isactive": false
     }
   ]
 }

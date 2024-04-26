@@ -56,8 +56,4 @@ export class RegisterComponent {
       this.toastr.warning('please enter a valid registration');
     }
   }
-
-
-
-
 }

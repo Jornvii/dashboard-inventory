@@ -28,10 +28,16 @@ export class LoginComponent {
 
   proceedlogin() {
     if (this.loginform.valid) {
-      this.service.Getbycode(this.loginform.value.id).subscribe(res => {
-        this.userdata = res;
-        console.log(this.userdata);
+      this.service.Getbycode(this.loginform.value).subscribe(res => {
+
+        this.toastr.success(
+          'Please Contact Admin to approve you to access the system',
+          'logined successfully'
+        );
+        this.router.navigate(['/dashboard']);
       });
+    } else {
+      this.toastr.warning('please enter a valid login');
     }
   }
 }

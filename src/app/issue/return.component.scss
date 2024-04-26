@@ -97,6 +97,7 @@ table {
   color: black;
   padding: 10px 20px;
   border-radius: 4px;
+  transition: all 0.3s ease;
   cursor: pointer;
   transition:
     background-color 0.3s ease,
@@ -106,6 +107,9 @@ table {
     background-color: #459fff; /* Button background color on hover */
     color: #000;
     font-weight: 700;
+    transition: all 0.3s ease;
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
   }
 }
 .red-button {
@@ -116,6 +120,7 @@ table {
   color: black;
   padding: 10px 20px;
   border-radius: 4px;
+  transition: all 0.3s ease;
   cursor: pointer;
   transition:
     background-color 0.3s ease,
@@ -125,9 +130,11 @@ table {
     background-color: red; /* Button background color on hover */
     color: #000;
     font-weight: 700;
+    transition: all 0.3s ease;
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
   }
 }
-
 
 // .timemasure {
 //   display:flex ;
@@ -146,4 +153,3 @@ table {
 //     }
 //   }
 // }
-
