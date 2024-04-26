@@ -9,7 +9,7 @@ import { ListRequestComponent } from './list-request/list-request.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RegisterComponent } from './register/register.component';
 import { HomepageComponent } from './homepage/homepage.component';
-import { ReturnComponent } from './return/return.component';
+import { ReturnComponent } from './issue/return.component';
 import { HistoryComponent } from './history/history.component';
 import { DetialComponent } from './detial/detial.component';
 

@@ -22,8 +22,14 @@
 
 
           <label>
-            Fac *
-            <input name="Family name" placeholder="Fac." required />
+            Fac
+            <div class="custom-select">
+              <mat-select [(value)]="selectedFac">
+                <mat-option *ngFor="let Fac of Facs" [value]="Fac.Fac">
+                  {{ Fac.viewValue }}
+                </mat-option>
+              </mat-select>
+            </div>
           </label>
         </div>
       </fieldset>
@@ -40,49 +46,46 @@
             <input name="Family name" placeholder="Drawing" required />
           </label>
         </div>
-        <div class="two-cols">
+        <!-- <div class="two-cols">
           <label>
             Use for
             <div class="custom-select">
-              <mat-select [(value)]="selectedProcess">
-                <mat-option *ngFor="let process of Processs" [value]="process.process">
-                  {{ process.viewProcess }}
+              <mat-select [(value)]="selectedusefor">
+                <mat-option *ngFor="let usefor of usefors" [value]="usefor.usefor">
+                  {{ usefor.viewusefor }}
                 </mat-option>
               </mat-select>
             </div>
-          </label>
-
-
-          <label>
-            Production
+          </label> -->
+          <!-- <label>
+            Fac
             <div class="custom-select">
-              <mat-select [(value)]="selectedProduction">
-                <mat-option *ngFor="let production of Productions" [value]="production.product">
-                  {{ production.viewValue }}
+              <mat-select [(value)]="selectedFac">
+                <mat-option *ngFor="let Fac of Facs" [value]="Fac.Fac">
+                  {{ Fac.viewValue }}
                 </mat-option>
               </mat-select>
             </div>
-          </label>
-
-        </div>
+          </label> -->
+        <!-- </div> -->
         <div class="two-cols">
           <label>
             MC Group
-            <input type="text" name="mc" required />
+            <input type="text" name="mc" placeholder="Enter Machine Group Name" required />
           </label>
           <label>
             MC.No
-            <input type="text" name="mcno" required />
+            <input type="text" name="mcno" placeholder="Machine Number" required />
           </label>
         </div>
         <div class="two-cols">
           <label>
             Process
-            <input type="text" name="section" required />
+            <input type="text" name="section" placeholder="Enter Process" required />
           </label>
           <label>
-            Request by
-            <input type="text" name="requester" placeholder="Your Full Name" required />
+            Section
+            <input type="text" name="Section" placeholder="Section" required />
           </label>
         </div>
 
@@ -90,11 +93,25 @@
 
 
         <div class="two-cols">
+          <label>
+            Use for
+            <div class="custom-select">
+              <mat-select [(value)]="selectedusefor">
+                <mat-option *ngFor="let usefor of usefors" [value]="usefor.usefor">
+                  {{ usefor.viewusefor }}
+                </mat-option>
+              </mat-select>
+            </div>
+          </label>
 
           <label>
             Date of Req.
             <input type="date" name="Date of birth" required />
           </label>
+          <!-- <label>
+            Request by
+            <input type="text" name="requester" placeholder="Your Full Name" required />
+          </label> -->
         </div>
         <label>
           Other

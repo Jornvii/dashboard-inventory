@@ -3,7 +3,8 @@
   border: 1px solid #ccc;
   font-family: Arial, sans-serif;
   width: 21cm; /* A4 width */
-  height: max-content;
+  height: 29.7cm; /* A4 height */
+  // height: max-content;
   margin: 0 auto;
   padding: 2cm; /* Margins */
 
@@ -114,7 +115,12 @@
 }
   .docnum{
     // text-align: center;
-    // padding: 20px;
-    margin: 10px;
-    border: 1px solid #ccc;
+    // padding-top: 5px;
+    // margin: 10px;
+    border: 1px dashed #ccc;
+    span{
+      color: gray;
+      padding-top: 5px;
+
+    }
   }

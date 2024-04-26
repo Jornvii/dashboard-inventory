@@ -9,17 +9,17 @@ interface Division {
   division: string;
   viewDivision: string;
 }
-interface Production {
+interface Fac {
   [x: string]: any;
-  product: string;
+  Fac: string;
   viewValue: string;
 }
 
 
-interface Process {
+interface usefor {
   [x: string]: any;
-  process: string;
-  viewProcess: string;
+  usefor: string;
+  viewusefor: string;
 }
 
 @Component({
@@ -40,30 +40,29 @@ export class RequestComponent {
 
   selectedDivision: string = '---';
 
-  Productions: Production[] = [
-    { product: '---', viewValue: '---' },
-    { product: 'Product 1', viewValue: 'Product 1' },
-    { product: 'Product 2', viewValue: 'Product 2' },
-    { product: 'Product 3', viewValue: 'Product 3' },
-    { product: 'Product 4', viewValue: 'Product 4' },
-    { product: 'Product 5', viewValue: 'Product 5' },
-    { product: 'Other', viewValue: 'Other' },
+  Facs: Fac[] = [
+    { Fac: '---', viewValue: '---' },
+    { Fac: '1', viewValue: '1' },
+    { Fac: '2', viewValue: '2' },
+    { Fac: '3', viewValue: '3' },
+    { Fac: '4', viewValue: '4' },
+    { Fac: '5', viewValue: '5' },
+    { Fac: 'Other', viewValue: 'Other' },
   ];
 
-  selectedProduction: string = '---';
+  selectedFac: string = '---';
 
 
 
-  Processs: Process[] = [
-    { process: '---', viewProcess: '---' },
-    { process: 'Sorting', viewProcess: 'Sorting' },
-    { process: 'F/A', viewProcess: 'F/A' },
-    { process: 'Rework', viewProcess: 'Rework' },
-    { process: 'Mass Product', viewProcess: 'Mass Product' },
-    { process: 'Pre Product', viewProcess: 'Pre Product' },
-    { process: 'Other', viewProcess: '---' },
+  usefors: usefor[] = [
+    { usefor: '---', viewusefor: '---' },
+    { usefor: 'Sorting', viewusefor: 'Sorting' },
+    { usefor: 'F/A', viewusefor: 'F/A' },
+    { usefor: 'Rework', viewusefor: 'Rework' },
+    { usefor: 'Mass Fac', viewusefor: 'Mass Fac' },
+    { usefor: 'Pre Fac', viewusefor: 'Pre Fac' },
   ];
 
-  selectedProcess: string = '---';
+  selectedusefor: string = '---';
 
 }

@@ -27,7 +27,7 @@ import { MainComponent } from './main/main.component';
 import { MaterialModule } from './material.module';
 import { RegisterComponent } from './register/register.component';
 import { RequestComponent } from './request/request.component';
-import { ReturnComponent } from './return/return.component';
+import { ReturnComponent } from './issue/return.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 
 

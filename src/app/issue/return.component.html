@@ -1,21 +1,66 @@
 <div class="wrapper">
-
   <div class="container">
-
     <!-- <h3>Date : 26/04/2024</h3> -->
-    <br>
+    <br />
     <fieldset>
       <div class="two-cols">
         <label>
           Doc No *
-          <input type="text" name="First name" placeholder="Enter Doc number" required />
+          <input
+            type="text"
+            name="First name"
+            placeholder="Enter Doc number"
+            required
+          />
         </label>
         <label>
           Date *
           <span>24/04/2024</span>
         </label>
       </div>
-      <button  class="sub-button">Show Gauge</button>
+      <button class="sub-button">Show Gauge</button>
+
+      <!-- <div class="timemasure">
+        <div class="mat-btn">
+          <div class="start">
+            <button mat-button (click)="startTimer()">
+              <mat-icon>play_arrow</mat-icon>
+            </button>
+          </div>
+          <div class="pause">
+            <button mat-button (click)="pauseTimer()">
+              <mat-icon>pause</mat-icon>
+            </button>
+          </div>
+          <div class="stop">
+            <button mat-button (click)="calculateWorkTime()">
+              <mat-icon>stop</mat-icon>
+            </button>
+            <p>{{ calculateWorkTime() }}</p>
+          </div>
+        </div>
+        <div class="total-time">
+          <span>box show time result</span>
+        </div>
+      </div> -->
+
+      <!-- <div class="timemasure">
+        <div class="start">
+          <button mat-button (click)="(onClick)">
+            <mat-icon>play_arrow</mat-icon>
+          </button>
+        </div>
+        <div class="pause">
+          <button mat-button (click)="(onClick)">
+            <mat-icon>pause</mat-icon>
+          </button>
+        </div>
+        <div class="total-time">
+          <button mat-button (click)="(onClick)">
+            <mat-icon>stop</mat-icon>
+          </button>
+        </div>
+      </div> -->
     </fieldset>
 
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
@@ -56,10 +101,9 @@
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
     </table>
-    <button  class="sub-button">Return Gauge ➤</button>
-    <button  class="red-button">Clear 🗑️</button>
+    <button class="sub-button">Return Gauge ➤</button>
+    <button class="red-button">Clear 🗑️</button>
 
     <!-- <mat-paginator [pageSizeOptions]="[5, 25, 50]" showFirstLastButtons></mat-paginator> -->
-    </div>
-
   </div>
+</div>
