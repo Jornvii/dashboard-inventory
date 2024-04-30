@@ -17,7 +17,11 @@
       <!-- <button class="red-button">Clear 🗑️</button> -->
     </fieldset>
 
-    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
+      <ng-container matColumnDef="issueDate">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Date Issue</th>
+        <td mat-cell *matCellDef="let element">{{ element.issueDate }}</td>
+      </ng-container>
       <ng-container matColumnDef="part">
         <th mat-header-cell *matHeaderCellDef>Part No.</th>
         <td mat-cell *matCellDef="let element">{{ element.part }}</td>

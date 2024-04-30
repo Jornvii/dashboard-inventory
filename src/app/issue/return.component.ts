@@ -7,6 +7,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { ActivatedRoute } from '@angular/router';
 
 import { TimeTrackingService } from '../time-tracking.service';
+import { WorkTimeCounter } from './work-time-counter';
 
 @Component({
   selector: 'app-return',
@@ -16,7 +17,8 @@ import { TimeTrackingService } from '../time-tracking.service';
   imports: [MatTableModule, MatPaginatorModule,MatSelectModule,MatButtonModule,MatIconModule,MatButtonModule],
 })
 export class ReturnComponent implements AfterViewInit {
-
+  workTimeCounter: WorkTimeCounter;
+  elapsedTime: string;
 
 
 
@@ -30,11 +32,34 @@ export class ReturnComponent implements AfterViewInit {
   @ViewChild(MatPaginator) paginator: MatPaginator | undefined;
 onClick: any;
 
-  constructor() { }
+  constructor() {
+    this.workTimeCounter = new WorkTimeCounter();
+    this.elapsedTime = '00:00:00';
+  }
   ngAfterViewInit() {
     if (this.paginator) {
       this.dataSource.paginator = this.paginator;
     }
+  }
+  startIssue() {
+    this.workTimeCounter.startTimer();
+    this.updateElapsedTime();
+  }
+
+  pause() {
+    this.workTimeCounter.pauseTimer();
+    this.updateElapsedTime();
+  }
+
+  done() {
+    const totalTimeWorked = this.elapsedTime;
+    alert(`Total Time issue Gauge : ${totalTimeWorked}`);
+  }
+
+  updateElapsedTime() {
+    setInterval(() => {
+      this.elapsedTime = this.workTimeCounter.getElapsedTime();
+    }, 1000);
   }
 }
 export interface PeriodicElement {
