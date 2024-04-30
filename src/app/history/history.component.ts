@@ -61,5 +61,7 @@ export interface PeriodicElement {
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  { part: "A12G-1", gauge: 'A-1AAS1', gmodel: '1.0079', qty: 2, process: 'Some Gauge', mc: 'Model XYZ', status: 'Option 1' },
+  { part: "1212A12G-1", gauge: 'A-1AAS1', gmodel: 'AZ0202+1', qty: 2, process: 'Turning', mc: 'Model XYZ', status: 'Done' },
+  { part: "1212A12G-2", gauge: 'A-1fd1112', gmodel: 'AZ0202q11', qty: 1, process: 'Turning11', mc: 'Model XYZ', status: 'Done' },
+  { part: "1212A12G-3", gauge: 'A-1AA23', gmodel: 'AZ0202111', qty: 1, process: 'Turning112', mc: 'Model XYZ', status: 'Done' },
 ];
