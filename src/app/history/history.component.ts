@@ -17,7 +17,7 @@ import { MatSort, MatSortModule } from '@angular/material/sort';
 })
 
 export class HistoryComponent implements AfterViewInit {
-  displayedColumns: string[] = ['issueDate','part', 'gauge', 'gmodel', 'qty', 'process', 'mc', 'status', 'viewdetial'];
+  displayedColumns: string[] = ['ReqDate','issueDate','DocNo','part', 'gmodel', 'process', 'mc', 'status', 'viewdetial'];
 
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   @ViewChild(MatPaginator) paginator: MatPaginator | undefined;
@@ -51,18 +51,18 @@ export class DetailViewDialogComponent {
 
 
 export interface PeriodicElement {
+  ReqDate:string;
   issueDate:String;
+  DocNo:string;
   part: string;
-  gauge?: string;
   gmodel?: string;
-  qty: number;
   process: string;
   mc: string;
   status: string;
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  {issueDate:'23/04/2024', part: "1212A12G-1", gauge: 'A-1AAS1', gmodel: 'AZ0202+1', qty: 2, process: 'Turning', mc: 'Model XYZ', status: 'Done' },
-  {issueDate:'2/04/2024', part: "1212A12G-2", gauge: 'A-1fd1112', gmodel: 'AZ0202q11', qty: 1, process: 'Turning11', mc: 'Model XYZ', status: 'Done' },
-  {issueDate:'13/04/2024', part: "1212A12G-3", gauge: 'A-1AA23', gmodel: 'AZ0202111', qty: 1, process: 'Turning112', mc: 'Model XYZ', status: 'Done' },
+  {ReqDate:'21/04/2024',issueDate:'23/04/2024',DocNo: "A000001", part: "1212A12G-1", gmodel: 'AZ0202+1',  process: 'Turning', mc: 'Model XYZ', status: 'Done' },
+  {ReqDate:'30/04/2024',issueDate:'2/04/2024',DocNo: "A000001", part: "1212A12G-2",  gmodel: 'AZ0202q11', process: 'Turning11', mc: 'Model XYZ', status: 'Done' },
+  {ReqDate:'10/04/2024',issueDate:'13/04/2024',DocNo: "A000001", part: "1212A12G-3",gmodel: 'AZ0202111',  process: 'Turning112', mc: 'Model XYZ', status: 'Done' },
 ];
