@@ -37,7 +37,6 @@ export class RequestComponent {
     { division: 'tPMA', viewDivision: 'PMA' },
     { division: 'Medical', viewDivision: 'Medical' },
   ];
-
   selectedDivision: string = '---';
 
   Facs: Fac[] = [
@@ -49,7 +48,6 @@ export class RequestComponent {
     { Fac: '5', viewValue: '5' },
     { Fac: 'Other', viewValue: 'Other' },
   ];
-
   selectedFac: string = '---';
 
 
@@ -62,7 +60,18 @@ export class RequestComponent {
     { usefor: 'Mass Fac', viewusefor: 'Mass Fac' },
     { usefor: 'Pre Fac', viewusefor: 'Pre Fac' },
   ];
-
   selectedusefor: string = '---';
 
+
+  selectedProcess: string;
+  processes = [
+    { process: 'proc1', viewProcess: 'Process 1' },
+    { process: 'proc2', viewProcess: 'Process 2' },
+    { process: 'proc3', viewProcess: 'Process 3' },
+
+  ];
+  constructor() {
+
+    this.selectedProcess = this.processes[0].process;
+  }
 }
